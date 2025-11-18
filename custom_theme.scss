@@ -25,7 +25,7 @@ $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
 $headingFontWeight: 700;
 $headingFontWeight: normal;
-$headingColor: $byzantium;
+$headingColor: $primary_blue;
 
 $heading1Size: 3.77em;
 $heading1TextShadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -100,20 +100,20 @@ code a,
   text-decoration: underline;
 
   &:hover {
-    color: $persian-green;
-    background-color: $black;
+    color: $white;
+    background-color: $primary_blue;
   }
 }
 
 a,
 .reveal a,
 .reveal .footer a {
-  color: $persian-green;
+  color: $primary_blue;
   text-decoration: underline !important;
 
   &:hover {
-    color: $black !important;
-    background-color: $persian-green !important;
+    color: $white !important;
+    background-color: $dark_blue !important;
   }
 }
 
@@ -173,12 +173,13 @@ h4 {
  
 /* List styling */
 ul {
-  padding-left: 0;
+  padding-left: 1em;
   margin-left: $blockMargin;
 }
 
 ul ul {
   margin-left: $blockMargin;
+  padding-left: 1em;
 }
 
 .text-color-darker {
