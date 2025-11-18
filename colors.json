@@ -1,9 +1,10 @@
 {
-  "black": "#000000ff",
+  "black": "#1A1A1Aff",
   "white": "#ffffffff",
   "grey": "#808080ff",
-  "byzantium": "#8f286fff",
-  "harvest-gold": "#eca400ff",
-  "persian-green": "#1b998bff",
-  "cerulean": "#006992ff"
+  "primary_blue": "#005EB8ff",
+  "dark_blue": "#003A70ff",
+  "light_blue": "#D9ECFAff",
+  "green": "#75B840ff"
 }
+
