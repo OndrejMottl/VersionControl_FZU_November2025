@@ -10,7 +10,7 @@ format:
     code-line-numbers: false
     code-overflow: wrap
     code-link: false
-    embed-resources: true
+    embed-resources: false
     center-title-slide: false
 ---
 
@@ -327,7 +327,6 @@ include_local_figure("QR_codes/qr_slides.svg")
 
 ### ✅ **By the end, you'll be able to:**
 
-- Use git in RStudio / VS Code
 - Understand basic git terminology
 - Create a GitHub repo
 - Make commits and push/pull changes
@@ -406,13 +405,13 @@ It is all about [keeping track]{.text-background-dark_blue} of [changes]{.text-b
 [This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
 :::
 
-## Exercise {.exercise}
+## Discussion {.exercise .text-center}
 
 `r countdown(minutes = 3)`
 
 :::: columns
 
-::: {.column width="50%"}
+::: {.column width="55%"}
 
 ### Do you recognize some of these questions?
 
@@ -424,13 +423,30 @@ It is all about [keeping track]{.text-background-dark_blue} of [changes]{.text-b
 
 :::
 
-::: {.column width="50%" }
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%" }
 
 ### How do you keep track of changes?
 
-```{r}
-#| label: version-nightmare
-knitr::include_graphics("https://ecorepsci.github.io/reproducible-science/img/version-nightmare.png")
+<br>
+
+```{bash}
+#| label: vc-exercise
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+project_script.py
+project_script1.py
+project_script2.py
+project_script4.py
+project_script4_new.py
+project_script_20191212.py
+project_script_20200122.py
+project_script_final.py
+project_script_final_final.py
+project_script_final_final_new.py
 ```
 
 :::
@@ -483,45 +499,6 @@ include_local_figure("Scriberia/file-management-manual-with-text.jpg")
 ::: {.footer}
 [This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
 :::
-
-## Project structure - RStudio Projects
-
-[**R-studio**]{.text-background-dark_blue} is using [Projects]{.text-background-primary_blue} already by default
-
-<br>
-
-```{r}
-#| label: rstudio-project
-knitr::include_graphics("https://ecorepsci.github.io/reproducible-science/img/rstudio-project.jpg")
-```
-
-::: {.footer}
-[Reproducible Data Science](https://ecorepsci.github.io/reproducible-science/index.html)
-:::
-
-
-## [Note on practical exercises]{.r-fit-text .text-color-dark_blue} {.bg-white}
-
-```{r}
-#| label: practical-exercise-note
-include_local_figure("Exercise/monkey_see_monkey_do_by_adiasarahma.jpg")
-```
-
-::: footer
-[image by adiasarahma](https://www.deviantart.com/adiasarahma/)
-:::
-
-
-## [Practical Exercise]{.text-size-heading3} {.exercise .text-center}
-
-<br>
-
-::: {.text-size-heading4 .blockquote}
-1. Create a new (RStudio) project
-2. Switch between projects
-:::
-
-`r countdown(minutes = 5)`
 
 ##
 
@@ -586,38 +563,13 @@ Getting all the necessary software installed, configured, and playing nicely tog
 
 ## Weapon of choice (GUI) {.text-center}
 
-You will still need to know the [basics of shell]{.text-background-primary_blue}.
-
 **GUI** = [G]{.text-background-dark_blue}raphical [U]{.text-background-dark_blue}ser [I]{.text-background-dark_blue}nterface
 
 I will be showing you how to use:
 
 :::: {.columns}
 
-::: {.column width="40%" .text-center}
-
-<br>
-<br>
-
-```{r}
-#| label: rstudio-logo
-#| fig-width: 1
-#| fig-height: 1
-include_local_figure("Logos/RStudio_logo_flat.svg.png")
-```
-
-### [RStudio](https://rstudio.com/) 
-:::
-
-::: {.column width="30%" .text-center}
-```{r}
-#| label: VSCode-logo
-#| fig-width: 1
-#| fig-height: 1
-include_local_figure("Logos/VSCode_logo.svg.png")
-```
-
-### [VS Code](https://code.visualstudio.com/)
+::: {.column width="20%"}
 :::
 
 ::: {.column width="30%" .text-center}
@@ -631,43 +583,23 @@ include_local_figure("Logos/GH_Desktop_logo.webp")
 ### [GH Desktop](https://desktop.github.com/)
 :::
 
-::::
-
-## Note on {usethis} package
-
-:::: {.columns}
-
-::: {.column width="65%"}
-The [{usethis} package](https://usethis.r-lib.org/index.html) is a collection of functions that help various tasks in [R](https://www.r-project.org/).
-
-Install the package by running:
+::: {.column width="30%" .text-center}
 ```{r}
-#| label: usethis-install
-#| echo: true
-#| eval: false
-install.packages("usethis")
-```
-
-call a function by running:
-```{r}
-#| label: usethis-function
-#| echo: true
-#| eval: false
-usethis::function_name()
-```
-
-:::
-
-::: {.column width="30%"}
-```{r}
-#| label: usethis-logo
+#| label: VSCode-logo
 #| fig-width: 1
 #| fig-height: 1
-knitr::include_graphics("https://usethis.r-lib.org/logo.png")
+include_local_figure("Logos/VSCode_logo.svg.png")
 ```
+
+### [VS Code](https://code.visualstudio.com/)
 :::
 
-:::: 
+::: {.column width="20%"}
+:::
+
+::::
+
+You still can use the [shell]{.text-background-primary_blue}.
 
 ## Basic vocabulary
 
@@ -675,8 +607,8 @@ knitr::include_graphics("https://usethis.r-lib.org/logo.png")
 
 ::: {.column width="45%" .incremental}
 
- * [R script]{.text-background-dark_blue} is a record of code.
- * [R Project]{.text-background-dark_blue} is self contained project/study/paper containg R scripts, data, figures, etc.
+ * [A script]{.text-background-dark_blue} is a record of code.
+ * [Project]{.text-background-dark_blue} is self contained project/study/paper containg scripts, data, figures, etc.
  * Every such project is called [repository]{.text-background-primary_blue} (ie a *repo*) 
  * Your **local** repository is called [local]{.text-background-light_blue}
  * Your **online** repository, is called [remote]{.text-background-light_blue}
@@ -701,44 +633,22 @@ knitr::include_graphics("https://user.oc-static.com/upload/2022/01/04/1641257693
 [https://openclassrooms.com/](https://openclassrooms.com/en/courses/7476131-manage-your-code-project-with-git-and-github/7681891-work-in-your-local-git-repository)
 ::: 
 
+## [Note on practical exercises]{.r-fit-text .text-color-dark_blue} {.bg-white}
+
+```{r}
+#| label: practical-exercise-note
+include_local_figure("Exercise/monkey_see_monkey_do_by_adiasarahma.jpg")
+```
+
+::: footer
+[image by adiasarahma](https://www.deviantart.com/adiasarahma/)
+:::
+
 ## Git init (project first)
 
 Activate [git]{.text-background-dark_blue} for a repo 
 
 ::::: {.panel-tabset}
-
-### RStudio
-
-1) For existing project
-
-```{r}
-#| label: git-init-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-usethis::use_git()
-```
-
-2) Create new project with git tracking (either via RStudio GUI or via {usethis} package):
-
-```{r}
-#| label: git-init-rstudio-new
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-usethis::create_project("<DIRECTORY>")
-# switch to the new project
-usethis::use_git()
-```
-
-### VS Code
-
-Git integration is automatic in [Source control]{.text-background-primary_blue} panel
-
-```{r}
-#| label: git-init-vscode
-knitr::include_graphics("https://www.sqlshack.com/wp-content/uploads/2020/07/visual-studio-code-and-git-source-control.png")
-```
 
 ### GH Desktop
 
@@ -757,6 +667,15 @@ knitr::include_graphics("https://docs.github.com/assets/cb-143755/mw-1440/images
 :::
 
 ::::
+
+### VS Code
+
+Git integration is automatic in [Source control]{.text-background-primary_blue} panel
+
+```{r}
+#| label: git-init-vscode
+knitr::include_graphics("https://www.sqlshack.com/wp-content/uploads/2020/07/visual-studio-code-and-git-source-control.png")
+```
 
 ### Command line
 
@@ -907,23 +826,23 @@ Make a change to a file and save it. Now *stage* the change:
 
 ::::: {.panel-tabset}
 
-### RStudio
+### GH Desktop
 
 :::: columns
 ::: {.column width="45%"}
 
 ```{r}
-#| label: git-stage-rstudio
-knitr::include_graphics("https://annakrystalli.me/talks/assets/git_tab.png")
+#| label: git-stage-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-16555/mw-1440/images/help/desktop/commit-all.webp")
 ```
 
 :::
 
 ::: {.column width="45%"}
 
-* two yellow `??` indicates adding a file 
-* a blue `M` indicates edit a file that has already been committed
-* a red `D` indicates deleting a file
+* The red icon indicates removed files.
+* The yellow icon indicates modified files.
+* The green icon indicates added files.
 
 :::
 
@@ -951,29 +870,9 @@ knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol
 
 ::::
 
-### GH Desktop
-
-:::: columns
-::: {.column width="45%"}
-
-```{r}
-#| label: git-stage-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-16555/mw-1440/images/help/desktop/commit-all.webp")
-```
-
-:::
-
-::: {.column width="45%"}
-
-* The red icon indicates removed files.
-* The yellow icon indicates modified files.
-* The green icon indicates added files.
-
-:::
-
-::::
-
 ### Command line
+
+Stage changes:
 
 ```{bash}
 #| label: git-stage-cl
@@ -981,6 +880,16 @@ knitr::include_graphics("https://docs.github.com/assets/cb-16555/mw-1440/images/
 #| eval: false
 #| code-line-numbers: false
 git add <FILE>
+```
+
+Unstage changes:
+
+```{bash}
+#| label: git-unstage-cl
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git reset <FILE>
 ```
 
 :::::
@@ -1004,20 +913,6 @@ Commit (record) *staged* changes:
 
 ::::: {.panel-tabset}
 
-### RStudio
-
-```{r}
-#| label: git-commit-rstudio
-knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittutorial/19_commit_window.png")
-```
-
-### VS Code
-
-```{r}
-#| label: git-commit-vscode
-knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-staging.png")
-```
-
 ### GH Desktop
 
 :::: columns
@@ -1036,6 +931,13 @@ knitr::include_graphics("https://user-images.githubusercontent.com/359239/432042
 :::
 
 ::::
+
+### VS Code
+
+```{r}
+#| label: git-commit-vscode
+knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-staging.png")
+```
 
 ### Command line
 
@@ -1167,24 +1069,25 @@ Now we need to *sync* changes with the [remote]{.text-background-dark_blue} usin
 
 ::::: {.panel-tabset}
 
-### RStudio
+### GH Desktop
 
+:::: columns
+::: {.column width="50%"}
 Add a remote to existing local repo (only once):
-
 ```{r}
-#| label: git-mk-remote-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-usethis::use_github()
+#| label: git--mk-remote-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-54091/mw-1440/images/help/desktop/publish-repository.webp")
 ```
+:::
 
+::: {.column width="50%"}
 Push local to remote (GitHub):
-
 ```{r}
-#| label: git-push-rstudio
-knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittutorial/21_push.png")
+#| label: git-push-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-17787/mw-1440/images/help/desktop/push-to-origin.webp")
 ```
+:::
+::::
 
 ### VS Code
 
@@ -1202,26 +1105,6 @@ Push local to remote (GitHub):
 ```{r}
 #| label: git-push-vscode
 knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol/intro/sync.png")
-```
-:::
-::::
-
-### GH Desktop
-
-:::: columns
-::: {.column width="50%"}
-Add a remote to existing local repo (only once):
-```{r}
-#| label: git--mk-remote-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-54091/mw-1440/images/help/desktop/publish-repository.webp")
-```
-:::
-
-::: {.column width="50%"}
-Push local to remote (GitHub):
-```{r}
-#| label: git-push-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-17787/mw-1440/images/help/desktop/push-to-origin.webp")
 ```
 :::
 ::::
@@ -1291,7 +1174,7 @@ Now we need to *sync* changes from the [remote]{.text-background-primary_blue} t
 
 ::::: {.panel-tabset}
 
-### RStudio
+### GH Desktop
 
 :::: columns
 ::: {.column width="10%"}
@@ -1300,8 +1183,8 @@ Now we need to *sync* changes from the [remote]{.text-background-primary_blue} t
 ::: {.column width="70%"}
 Pull from remote (GitHub) to local
 ```{r}
-#| label: git-pull-rstudio
-knitr::include_graphics("https://annakrystalli.me/talks/assets/git_tab.png")
+#| label: git-pull-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-24440/mw-1440/images/help/desktop/pull-button.webp")
 ```
 :::
 ::::
@@ -1318,21 +1201,6 @@ Pull from remote (GitHub) to local
 #| label: git-pull-vscode
 # TODO: Add VSCode sync screenshot to Materials/VSCode/vscode_sync.png
 knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol/intro/sync.png")
-```
-:::
-::::
-
-### GH Desktop
-
-:::: columns
-::: {.column width="10%"}
-:::
-
-::: {.column width="70%"}
-Pull from remote (GitHub) to local
-```{r}
-#| label: git-pull-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-24440/mw-1440/images/help/desktop/pull-button.webp")
 ```
 :::
 ::::
@@ -1498,28 +1366,6 @@ Example of online repo: [OndrejMottl/VersionControl-playground](https://github.c
 
 ::::: {.panel-tabset}
 
-### RStudio
-
-Clone repo using new project in RStudio GUI or via {usethis} package:
-
-```{r}
-#| label: git-clone-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-usethis::create_from_github(
-  repo_spec = "https://github.com/<OWNER>/<REPO>.git",
-  destdir = "<DIRECTORY>",
-  fork = FALSE
-  )
-```
-
-### VS Code
-
-Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
-
-Paste in URL: `"https://github.com/<OWNER>/<REPO>.git"`
-
 ### GH Desktop
 
 ```{r}
@@ -1527,6 +1373,11 @@ Paste in URL: `"https://github.com/<OWNER>/<REPO>.git"`
 knitr::include_graphics("https://docs.github.com/assets/cb-10969/mw-1440/images/help/desktop/clone-file-menu-windows.webp")
 ```
 
+### VS Code
+
+Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
+
+Paste in URL: `"https://github.com/<OWNER>/<REPO>.git"`
 
 ### Command line
 
@@ -1642,24 +1493,6 @@ How to undo last commit?
 
 ::::: {.panel-tabset}
 
-### RStudio
-
-RStudio has a range of possibilities to work with Git and GitHub as shown in this tutorial. The **Terminal** (NOT *console*) has more commands and options and will be handy for trouble shooting.
-
-```{bash}
-#| label: git-undo-commit-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git reset --soft HEAD@{1}
-```
-
-### VS Code
-
-Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
-
-Write [Git: Undo Last Commit]{.text-background-light_blue}
-
 ### GH Desktop
 
 :::: columns
@@ -1673,6 +1506,12 @@ knitr::include_graphics("https://docs.github.com/assets/cb-12506/mw-1440/images/
 ```
 :::
 ::::
+
+### VS Code
+
+Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
+
+Write [Git: Undo Last Commit]{.text-background-light_blue}
 
 ### Command line
 
@@ -1694,19 +1533,21 @@ How to undo last commit?
 
 ::::: {.panel-tabset}
 
-### RStudio
+### GH Desktop
 
-We need the **Terminal** (NOT *console*) again.
+Right-click on the commit you would like to undo to and select [Revert a commit]{.text-background-light_blue}.
 
-Copy the **SHA** of the last commit
+:::: columns
+:::{.column width="10%"}
+:::
 
-```{bash}
-#| label: git-reset-commit-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git reset --hard <SHA>
+:::{.column width="70%"}
+```{r}
+#| label: git-reset-commit-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp")
 ```
+:::
+::::
 
 ### VS Code
 
@@ -1720,22 +1561,6 @@ In the [Source control]{.text-background-primary_blue} panel -> **COMMITS** sect
 ```{r}
 #| label: git-reset-commit-VScode
 knitr::include_graphics("https://www.gitkraken.com/wp-content/uploads/2022/03/gitlens-revert-commit-sidebar-1.png")
-```
-:::
-::::
-
-### GH Desktop
-
-Right-click on the commit you would like to undo to and select [Revert a commit]{.text-background-light_blue}.
-
-:::: columns
-:::{.column width="10%"}
-:::
-
-:::{.column width="70%"}
-```{r}
-#| label: git-reset-commit-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-130280/mw-1440/images/help/desktop/history-tab-in-commit-sidebar.webp")
 ```
 :::
 ::::
@@ -1782,20 +1607,16 @@ knitr::include_graphics("https://coderefinery.github.io/git-intro/_images/gopher
 
 ::::: {.panel-tabset}
 
-### RStudio
+### GH Desktop
 
 :::: columns
-::: {.column width="70%"}
-```{r}
-#| label: git-make-branch-rstudio
-knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/fork_branch_tutorial/5_make_new_branch.png")
-```
+:::{.column width="10%"}
 :::
 
-::: {.column width="30%"}
+:::{.column width="60%"}
 ```{r}
-#| label: git-make-branch2-rstudio
-knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/fork_branch_tutorial/6_name_branch.png")
+#| label: git-make-branch-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-26427/mw-1440/images/help/desktop/new-branch-button-mac.webp")
 ```
 :::
 ::::
@@ -1810,20 +1631,6 @@ knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/fork_
 ```{r}
 #| label: git-make-branch-VScode
 knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-create-branch.png")
-```
-:::
-::::
-
-### GH Desktop
-
-:::: columns
-:::{.column width="10%"}
-:::
-
-:::{.column width="60%"}
-```{r}
-#| label: git-make-branch-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-26427/mw-1440/images/help/desktop/new-branch-button-mac.webp")
 ```
 :::
 ::::
@@ -1850,16 +1657,16 @@ Switching between branches is sometimes called ([checkout]{.text-background-ligh
 
 ::::: {.panel-tabset}
 
-### RStudio
+### GH Desktop
 
 :::: columns
-::: {.column width="10%"}
+:::{.column width="10%"}
 :::
 
-::: {.column width="70%"}
+:::{.column width="60%"}
 ```{r}
-#| label: git-switch-branch-rstudio
-knitr::include_graphics("https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/img/ChangeBranch.png")
+#| label: git-switch-branch-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-38142/mw-1440/images/help/desktop/select-branch-from-dropdown.webp")
 ```
 :::
 ::::
@@ -1875,20 +1682,6 @@ knitr::include_graphics("https://aberdeenstudygroup.github.io/studyGroup/lessons
 #| label: git-switch-branch-VScode
 # TODO: Add VSCode branch switch screenshot to Materials/VSCode/CheckoutOrCreateBranch-1.png
 knitr::include_graphics("https://code.visualstudio.com/assets/docs/sourcecontrol/intro/scm-create-branch.png")
-```
-:::
-::::
-
-### GH Desktop
-
-:::: columns
-:::{.column width="10%"}
-:::
-
-:::{.column width="60%"}
-```{r}
-#| label: git-switch-branch-GH
-knitr::include_graphics("https://docs.github.com/assets/cb-38142/mw-1440/images/help/desktop/select-branch-from-dropdown.webp")
 ```
 :::
 ::::
@@ -2113,36 +1906,6 @@ We can also delete branch **before** merging
 
 ::::: {.panel-tabset}
 
-### RStudio
-
-We need the **Terminal** (NOT *console*) again.
-
-To delete a [local]{.text-background-primary_blue} branch
-
-```{bash}
-#| label: git-delete-branch-local-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git branch -d <BRANCH-NAME>
-```
-
-To delete a [remote]{.text-background-dark_blue} on GitHub branch
-
-```{bash}
-#| label: git-delete-branch-remote-rstudio
-#| echo: true
-#| eval: false
-#| code-line-numbers: false
-git push origin --delete <BRANCH-NAME>
-```
-
-### VS Code
-
-Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
-
-Select [Git: Delete branch ...]{.text-background-light_blue}
-
 ### GH Desktop
 
 :::: columns
@@ -2156,6 +1919,12 @@ knitr::include_graphics("https://docs.github.com/assets/cb-28505/mw-1440/images/
 ```
 :::
 ::::
+
+### VS Code
+
+Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
+
+Select [Git: Delete branch ...]{.text-background-light_blue}
 
 ### Command line
 
@@ -2190,17 +1959,6 @@ git push origin --delete <BRANCH-NAME>
 :::
 
 `r countdown(minutes = 5)`
-
-## PR workflow with {usethis}
-
-```{r}
-#| label: git-pr-helpers
-knitr::include_graphics("https://www.garrickadenbuie.com/blog/pull-request-flow-usethis/usethis-pr-flow-medium.jpg")
-```
-
-::: footer
-[Pull Request Flow with usethis](https://www.garrickadenbuie.com/blog/pull-request-flow-usethis)
-:::
 
 # [Outro]{.bold .r-fit-text .text-color-white} {.bg-dark_blue}
 
