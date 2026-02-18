@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300" width="300">
   <g id="qrcode:https://bit.ly/mottl_prez_fzu_202511">
-    <rect x="0" y="0" width="300px" height="300px" style="fill:#003A70ff;"/>
+    <rect x="0" y="0" width="300px" height="300px" style="fill:#008691;"/>
     <rect x="20.93" y="20.93" width="6.98" height="6.98" stroke="#ffffffff" stroke-width="0.2" stroke-linecap="butt" fill="#ffffffff"/>
     <rect x="20.93" y="27.91" width="6.98" height="6.98" stroke="#ffffffff" stroke-width="0.2" stroke-linecap="butt" fill="#ffffffff"/>
     <rect x="20.93" y="34.88" width="6.98" height="6.98" stroke="#ffffffff" stroke-width="0.2" stroke-linecap="butt" fill="#ffffffff"/>

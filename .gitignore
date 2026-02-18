@@ -51,3 +51,7 @@ rsconnect/
 
 # Quarto
 /.quarto/
+**/*.quarto_ipynb
+
+# Raw PDF is too large for GH
+presentation_raw.pdf
