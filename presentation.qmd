@@ -2041,25 +2041,25 @@ Maybe next time?
 <br>
 <br>
 
-::: {.text-larger .text-color-pink .text-font-open-sans}
-Introduction to [GitHub]{.text-font-roboto .text-bold .text-color-green} and [Version Control]{.text-font-roboto .text-bold .text-color-green} 
+::: {.text-larger .text-color-black .text-font-open-sans}
+Introduction to [GitHub]{.text-font-roboto .text-bold .text-color-white} and [Version Control]{.text-font-roboto .text-bold .text-color-white} 
 :::
 
 :::: {.r-hstack}
-::: {data-id="box1" style="background: `r colors['azure']`; width: 120px; height: 15px; margin: 0px;"}
+::: {data-id="box1" style="background: `r colors['white']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 
-::: {data-id="box2" style="background: `r colors['green']`; width: 550px; height: 15px; margin: 0px;"}
+::: {data-id="box2" style="background: `r colors['black']`; width: 550px; height: 15px; margin: 0px;"}
 :::
 
 ::: {data-id="box3" style="background: `r colors['purple']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 
-::: {data-id="box3" style="background: `r colors['green']`; width: 120px; height: 15px; margin: 0px;"}
+::: {data-id="box3" style="background: `r colors['pink']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 ::::
 
-[28.11.2025]{.text-color-green}
+[28.11.2025]{.text-color-pink}
 
 :::
 

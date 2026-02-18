@@ -111,8 +111,8 @@ code a,
 a,
 .reveal a,
 .reveal .footer a {
-  color: $white;
-  background-color: $pink;
+  color: $white !important;
+  background-color: $pink !important;
   padding: $smallMargin;
   border-radius: 5px;
   text-decoration: underline !important;
@@ -121,6 +121,25 @@ a,
     color: $pink !important;
     background-color: $white !important;
   }
+}
+
+/* Keep links readable on green slides */
+.reveal .slides section.bg-green a,
+.reveal .slides section.bg-green .footer a {
+  color: $white !important;
+}
+
+/* Do not style code line-number anchors as regular links */
+.reveal pre a,
+.reveal pre code a,
+.reveal .sourceCode a {
+  color: inherit !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+  pointer-events: none;
+  cursor: default;
 }
 
 /* Fix for code blocks in HTML output */
