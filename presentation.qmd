@@ -85,9 +85,9 @@ calculate_contrast_color <- function(hex_color) {
 
   # Return black for light backgrounds, white for dark backgrounds
   if (luminance > 0.5) {
-    return("$black") # Use black text on light backgrounds
+    return(unname(colors["black"])) # Use black text on light backgrounds
   } else {
-    return("$white") # Use white text on dark backgrounds
+    return(unname(colors["white"])) # Use white text on dark backgrounds
   }
 }
 
@@ -169,14 +169,23 @@ writeLines(
 
 ```
 
-# {.bg-light_blue}
+# {.bg-green}
 
+<br>
 <br>
 <br>
 
 :::: {.columns}
 
 ::: {.column width="45%"}
+
+<br>
+<br>
+
+```{r}
+#| label: EOSC logo
+include_local_figure("Logos/EOSC_white.png")
+```
 :::
 
 ::: {.column width="30%"}
@@ -203,18 +212,18 @@ include_local_figure("Logos/FZU.png")
 ::: {data-id="box1" style="background: `r colors['white']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 
-::: {data-id="box2" style="background: `r colors['dark_blue']`; width: 550px; height: 15px; margin: 0px;"}
+::: {data-id="box2" style="background: `r colors['black']`; width: 550px; height: 15px; margin: 0px;"}
 :::
 
-::: {data-id="box3" style="background: `r colors['primary_blue']`; width: 120px; height: 15px; margin: 0px;"}
+::: {data-id="box3" style="background: `r colors['purple']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 
-::: {data-id="box4" style="background: `r colors['green']`; width: 120px; height: 15px; margin: 0px;"}
+::: {data-id="box4" style="background: `r colors['pink']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 :::
 
 ::: {.text-larger .text-color-black .text-font-heading}
-Introduction to [GitHub]{.text-bold .text-color-dark_blue} and [Version Control]{.text-bold .text-color-dark_blue} 
+Introduction to [GitHub]{.text-bold .text-color-white} and [Version Control]{.text-bold .text-color-white} 
 :::
 
 <br>
@@ -222,9 +231,9 @@ Introduction to [GitHub]{.text-bold .text-color-dark_blue} and [Version Control]
 ::: {.text-right}
 [👤](https://ondrejmottl.github.io/)Ondřej Mottl
 
-[November 2025]{.text-color-primary_blue}
+[November 2025]{.text-color-pink}
 
-[FZU]{.text-color-primary_blue}
+[FZU]{.text-color-pink}
 :::
 
 ## 🙋Hi! I am Ondřej Mottl
@@ -263,7 +272,7 @@ include_local_figure("About/head_photo.png")
 
 <!--- TODO Add more details about my research --->
 
-## [This presentation]{.text-color-white} {.text-center .bg-dark_blue}
+## [This presentation]{.text-color-white} {.text-center .bg-green}
 
 <br>
 <br>
@@ -294,7 +303,7 @@ qrcode::generate_svg(
   qrcode = qr_slides,
   filename = here::here("Materials/QR_codes/qr_slides.svg"),
   foreground = colors['white'],
-  background = colors['dark_blue']
+  background = colors['green']
 )
 
 include_local_figure("QR_codes/qr_slides.svg")
@@ -381,7 +390,7 @@ include_local_figure("Scriberia/ReproducibleJourney.jpg")
 [This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
 :::
 
-# [Version control]{.bold .r-fit-text .text-color-white} {.bg-dark_blue}
+# [Version control]{.bold .r-fit-text .text-color-white} {.bg-green}
 
 ## Ring a bell? {.text-center}
 
@@ -398,7 +407,7 @@ include_local_figure("Scriberia/VersionControl.jpg")
 ```
 
 ::: {.text-center}
-It is all about [keeping track]{.text-background-dark_blue} of [changes]{.text-background-green} 📓✍️
+It is all about [keeping track]{.text-background-green} of [changes]{.text-background-green} 📓✍️
 :::
 
 ::: footer
@@ -457,7 +466,7 @@ project_script_final_final_new.py
 [Reproducible Data Science](https://ecorepsci.github.io/reproducible-science/index.html)
 :::
 
-# [Fundamentals]{.bold .r-fit-text .text-color-white} {.bg-dark_blue}
+# [Fundamentals]{.bold .r-fit-text .text-color-white} {.bg-green}
 
 ## Project self-containment
 
@@ -563,7 +572,7 @@ Getting all the necessary software installed, configured, and playing nicely tog
 
 ## Weapon of choice (GUI) {.text-center}
 
-**GUI** = [G]{.text-background-dark_blue}raphical [U]{.text-background-dark_blue}ser [I]{.text-background-dark_blue}nterface
+**GUI** = [G]{.text-background-green}raphical [U]{.text-background-green}ser [I]{.text-background-green}nterface
 
 I will be showing you how to use:
 
@@ -599,7 +608,7 @@ include_local_figure("Logos/VSCode_logo.svg.png")
 
 ::::
 
-You still can use the [shell]{.text-background-primary_blue}.
+You still can use the [shell]{.text-background-pink}.
 
 ## Basic vocabulary
 
@@ -607,11 +616,11 @@ You still can use the [shell]{.text-background-primary_blue}.
 
 ::: {.column width="45%" .incremental}
 
- * [A script]{.text-background-dark_blue} is a record of code.
- * [Project]{.text-background-dark_blue} is self contained project/study/paper containg scripts, data, figures, etc.
- * Every such project is called [repository]{.text-background-primary_blue} (ie a *repo*) 
- * Your **local** repository is called [local]{.text-background-light_blue}
- * Your **online** repository, is called [remote]{.text-background-light_blue}
+ * [A script]{.text-background-green} is a record of code.
+ * [Project]{.text-background-green} is self contained project/study/paper containg scripts, data, figures, etc.
+ * Every such project is called [repository]{.text-background-pink} (ie a *repo*) 
+ * Your **local** repository is called [local]{.text-background-azure}
+ * Your **online** repository, is called [remote]{.text-background-azure}
 
 :::
 
@@ -633,7 +642,7 @@ knitr::include_graphics("https://user.oc-static.com/upload/2022/01/04/1641257693
 [https://openclassrooms.com/](https://openclassrooms.com/en/courses/7476131-manage-your-code-project-with-git-and-github/7681891-work-in-your-local-git-repository)
 ::: 
 
-## [Note on practical exercises]{.r-fit-text .text-color-dark_blue} {.bg-white}
+## [Note on practical exercises]{.r-fit-text .text-color-green} {.bg-white}
 
 ```{r}
 #| label: practical-exercise-note
@@ -646,7 +655,7 @@ include_local_figure("Exercise/monkey_see_monkey_do_by_adiasarahma.jpg")
 
 ## Git init (project first)
 
-Activate [git]{.text-background-dark_blue} for a repo 
+Activate [git]{.text-background-green} for a repo 
 
 ::::: {.panel-tabset}
 
@@ -670,7 +679,7 @@ knitr::include_graphics("https://docs.github.com/assets/cb-143755/mw-1440/images
 
 ### VS Code
 
-Git integration is automatic in [Source control]{.text-background-primary_blue} panel
+Git integration is automatic in [Source control]{.text-background-pink} panel
 
 ```{r}
 #| label: git-init-vscode
@@ -716,13 +725,13 @@ git init <DIRECTORY>
 
 `r countdown(minutes = 5)`
 
-# [A record of a change]{.bold .r-fit-text .text-color-white} {.bg-dark_blue}
+# [A record of a change]{.bold .r-fit-text .text-color-white} {.bg-green}
 
 ## a commit
 
-A [**commit**]{.text-background-dark_blue} is a [record]{.text-background-primary_blue} of a change
+A [**commit**]{.text-background-green} is a [record]{.text-background-pink} of a change
 
-If you create or edit a file in your repository and save the changes, you need to [record]{.text-background-primary_blue} your change via a [**commit**]{.text-background-dark_blue}
+If you create or edit a file in your repository and save the changes, you need to [record]{.text-background-pink} your change via a [**commit**]{.text-background-green}
 
 ::::: {.fragment}
 
@@ -1019,8 +1028,8 @@ Date:   Sat Mar 15 10:31:28 2008 -0700
 
 Commits are **quick** and **cheap**. Therefore:
 
-1. commit [**often** (!)]{.text-background-dark_blue} 
-2. provide [**useful**]{.text-background-primary_blue} commit messages.
+1. commit [**often** (!)]{.text-background-green} 
+2. provide [**useful**]{.text-background-pink} commit messages.
 
 :::: columns
 
@@ -1050,7 +1059,7 @@ knitr::include_graphics("https://happygitwithr.com/img/commit-diff-sha-tag.png")
 [Happy Git and GitHub for the useR](https://happygitwithr.com/install-intro)
 :::
 
-# [Remote]{.bold .r-fit-text .text-color-white} {.bg-dark_blue}
+# [Remote]{.bold .r-fit-text .text-color-white} {.bg-green}
 
 ## remote
 
@@ -1065,7 +1074,7 @@ knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittu
 
 ## Update remote - PUSH
 
-Now we need to *sync* changes with the [remote]{.text-background-dark_blue} using [**PUSH**]{.text-background-primary_blue}
+Now we need to *sync* changes with the [remote]{.text-background-green} using [**PUSH**]{.text-background-pink}
 
 ::::: {.panel-tabset}
 
@@ -1170,7 +1179,7 @@ knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittu
 
 ## update local- PULL 
 
-Now we need to *sync* changes from the [remote]{.text-background-primary_blue} to [local]{.text-background-primary_blue} using [**PULL**]{.text-background-dark_blue}
+Now we need to *sync* changes from the [remote]{.text-background-pink} to [local]{.text-background-pink} using [**PULL**]{.text-background-green}
 
 ::::: {.panel-tabset}
 
@@ -1219,7 +1228,7 @@ git pull
 
 :::::
 
-# [GitHub intermezzo]{.r-fit-text} {.bg-light_blue .text-center}
+# [GitHub intermezzo]{.r-fit-text} {.bg-azure .text-center}
 
 ## A GitHub repo
 
@@ -1317,7 +1326,7 @@ include_local_figure("GitHub/07_final_click.png")
 
 ## Sharing your repo
 
-Github allows you to specify [roles]{.text-background-dark_blue} and [permissions]{.text-background-primary_blue} of your repo.
+Github allows you to specify [roles]{.text-background-green} and [permissions]{.text-background-pink} of your repo.
 
 ```{r}
 #| label: GH-team-admin-roles
@@ -1360,7 +1369,7 @@ knitr::include_graphics("https://biostats-r.github.io/biostats/github/Pics/gittu
 
 ## Git clone (repo first)
 
-Copy (download) from [remote repo]{.text-background-dark_blue} to [local]{.text-background-primary_blue} machine
+Copy (download) from [remote repo]{.text-background-green} to [local]{.text-background-pink} machine
 
 Example of online repo: [OndrejMottl/VersionControl-playground](https://github.com/OndrejMottl/VersionControl-playground)
 
@@ -1375,7 +1384,7 @@ knitr::include_graphics("https://docs.github.com/assets/cb-10969/mw-1440/images/
 
 ### VS Code
 
-Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
+Open [Command Palette]{.text-background-pink} (`Ctrl+Shift+p`)
 
 Paste in URL: `"https://github.com/<OWNER>/<REPO>.git"`
 
@@ -1401,7 +1410,7 @@ git clone https://github.com/<OWNER>/<REPO>.git <DIRECTORY>
 
 `r countdown(minutes = 5)`
 
-# [Merge conflict]{.bold .r-fit-text .text-color-white} {.bg-dark_blue}
+# [Merge conflict]{.bold .r-fit-text .text-color-white} {.bg-green}
 
 ## Merge conflict 💩💩💩
 
@@ -1410,7 +1419,7 @@ git clone https://github.com/<OWNER>/<REPO>.git <DIRECTORY>
 knitr::include_graphics("https://www.simplilearn.com/ice9/free_resources_article_thumb/pull-push.JPG")
 ```
 
-A [merge conflict]{.text-background-dark_blue} can occur when you are changing the [same line]{.text-background-primary_blue} in one file [differently]{.text-background-light_blue}.
+A [merge conflict]{.text-background-green} can occur when you are changing the [same line]{.text-background-pink} in one file [differently]{.text-background-azure}.
 
 :::footer
 [https://www.simplilearn.com/](https://www.simplilearn.com/tutorials/git-tutorial/merge-conflicts-in-git)
@@ -1449,7 +1458,7 @@ a good strategy to avoid such conflicts:
 ::: {.column width="50%" .fragment}
 <br>
 
-Merge conflicts cannot always be avoided (but can be mitigated by [branches]{.text-background-dark_blue}; later).
+Merge conflicts cannot always be avoided (but can be mitigated by [branches]{.text-background-green}; later).
 :::
 ::::
 
@@ -1489,7 +1498,7 @@ Then **save the file**, **stage**, and **commit** again
 
 How to undo last commit?
 
-[Variant A]{.text-background-dark_blue}: I commited but **NOT** [pushed yet]{.text-background-light_blue}.
+[Variant A]{.text-background-green}: I commited but **NOT** [pushed yet]{.text-background-azure}.
 
 ::::: {.panel-tabset}
 
@@ -1509,9 +1518,9 @@ knitr::include_graphics("https://docs.github.com/assets/cb-12506/mw-1440/images/
 
 ### VS Code
 
-Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
+Open [Command Palette]{.text-background-pink} (`Ctrl+Shift+p`)
 
-Write [Git: Undo Last Commit]{.text-background-light_blue}
+Write [Git: Undo Last Commit]{.text-background-azure}
 
 ### Command line
 
@@ -1529,13 +1538,13 @@ git reset --soft HEAD@{1}
 
 How to undo last commit?
 
-[Variant B]{.text-background-primary_blue}: I commited **AND** [pushed already]{.text-background-light_blue}.
+[Variant B]{.text-background-pink}: I commited **AND** [pushed already]{.text-background-azure}.
 
 ::::: {.panel-tabset}
 
 ### GH Desktop
 
-Right-click on the commit you would like to undo to and select [Revert a commit]{.text-background-light_blue}.
+Right-click on the commit you would like to undo to and select [Revert a commit]{.text-background-azure}.
 
 :::: columns
 :::{.column width="10%"}
@@ -1551,7 +1560,7 @@ knitr::include_graphics("https://docs.github.com/assets/cb-130280/mw-1440/images
 
 ### VS Code
 
-In the [Source control]{.text-background-primary_blue} panel -> **COMMITS** section -> Right-click on the commit you want to revert to -> Select the [Reset Current Branch to Previous Commit]{.text-background-light_blue}
+In the [Source control]{.text-background-pink} panel -> **COMMITS** section -> Right-click on the commit you want to revert to -> Select the [Reset Current Branch to Previous Commit]{.text-background-azure}
 
 :::: columns
 :::{.column width="10%"}
@@ -1579,7 +1588,7 @@ git reset --hard <SHA>
 
 :::::
 
-# [Branches]{.r-fit-text .text-color-white} {.bg-dark_blue .text-center}
+# [Branches]{.r-fit-text .text-color-white} {.bg-green .text-center}
 
 ## Branches
 
@@ -1649,9 +1658,9 @@ git branch <BRANCH-NAME>
 
 ## Switching between branches
 
-The default branch is called [main]{.text-background-dark_blue} or [master]{.text-background-dark_blue}
+The default branch is called [main]{.text-background-green} or [master]{.text-background-green}
 
-Switching between branches is sometimes called ([checkout]{.text-background-light_blue})
+Switching between branches is sometimes called ([checkout]{.text-background-azure})
 
 ‼️ Make sure that you have all changes commited before switching ‼️
 
@@ -1760,7 +1769,7 @@ knitr::include_graphics("https://www.dummies.com/wp-content/uploads/github-open-
 
 ## Pull Request - Overview
 
-Now you can [add more commits]{.text-background-dark_blue} on GitHub, (add [Comment]{.text-background-primary_blue} to start discussion), or [merge]{.text-background-green} the branch.
+Now you can [add more commits]{.text-background-green} on GitHub, (add [Comment]{.text-background-pink} to start discussion), or [merge]{.text-background-green} the branch.
 
 ```{r}
 #| label: git-pull-request-overview
@@ -1781,12 +1790,12 @@ knitr::include_graphics("https://aberdeenstudygroup.github.io/studyGroup/lessons
 
 `r countdown(minutes = 25)`
 
-## Note on Markdown {.bg-light_blue}
+## Note on Markdown {.bg-azure}
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-You can use [Markdown]{.text-background-dark_blue} on GitHub in the description and comments
+You can use [Markdown]{.text-background-green} on GitHub in the description and comments
 
 More details on [Github Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 :::
@@ -1805,7 +1814,7 @@ include_local_figure("Markdown/Markdown_syntax.png")
 
 ## Pull Request - review
 
-A tool to [review]{.text-background-dark_blue} on GitHub [suggested]{.text-background-primary_blue} changes
+A tool to [review]{.text-background-green} on GitHub [suggested]{.text-background-pink} changes
 
 ```{r}
 #| label: git-pull-request-scheme2
@@ -1830,7 +1839,7 @@ include_local_figure("Scriberia/FirstPullRequest.jpg")
 
 ## Pull Request - review
 
-On [someone else's PR]{.text-background-dark_blue} on GitHub, you can comment on **individual lines** or **whole files**
+On [someone else's PR]{.text-background-green} on GitHub, you can comment on **individual lines** or **whole files**
 
 ```{r}
 #| label: git-pull-request-review
@@ -1848,7 +1857,7 @@ include_local_figure("GitHub/Example-comments-on-GitHub_W640.jpg")
 [What Are They Talking About? Analyzing Code Reviews in Pull-Based Development Model](http://dx.doi.org/10.1007/s11390-017-1783-2)
 :::
 
-# [Merging branches]{.r-fit-text} {.bg-light_blue .text-center}
+# [Merging branches]{.r-fit-text} {.bg-azure .text-center}
 
 ## Merge conflict with branch 💩
 
@@ -1922,13 +1931,13 @@ knitr::include_graphics("https://docs.github.com/assets/cb-28505/mw-1440/images/
 
 ### VS Code
 
-Open [Command Palette]{.text-background-primary_blue} (`Ctrl+Shift+p`)
+Open [Command Palette]{.text-background-pink} (`Ctrl+Shift+p`)
 
-Select [Git: Delete branch ...]{.text-background-light_blue}
+Select [Git: Delete branch ...]{.text-background-azure}
 
 ### Command line
 
-To delete a [local]{.text-background-primary_blue} branch
+To delete a [local]{.text-background-pink} branch
 
 ```{bash}
 #| label: git-delete-branch-local-cl
@@ -1938,7 +1947,7 @@ To delete a [local]{.text-background-primary_blue} branch
 git branch -d <BRANCH-NAME>
 ```
 
-To delete a [remote]{.text-background-dark_blue} on GitHub branch
+To delete a [remote]{.text-background-green} on GitHub branch
 
 ```{bash}
 #| label: git-delete-branch-remote-cl
@@ -1960,7 +1969,7 @@ git push origin --delete <BRANCH-NAME>
 
 `r countdown(minutes = 5)`
 
-# [Outro]{.bold .r-fit-text .text-color-white} {.bg-dark_blue}
+# [Outro]{.bold .r-fit-text .text-color-white} {.bg-green}
 
 ## GitHub tools suite
 
@@ -1992,7 +2001,7 @@ include_local_figure("Github/GH_management.png")
 
 ::: {.column width="45%" .fragment}
 
-GitHub has a lot of [features]{.text-background-dartmouth-green} and [tools]{.text-background-brunswick-green} to make your life easier:
+GitHub has a lot of [features]{.text-background-green} and [tools]{.text-background-purple} to make your life easier:
 
 * Project management
 * Collaboration
@@ -2004,7 +2013,7 @@ GitHub has a lot of [features]{.text-background-dartmouth-green} and [tools]{.te
 
 ::: {.column width="55%" .fragment}
 
-In addition, I have [additional materials]{.text-background-orange-web} on:
+In addition, I have [additional materials]{.text-background-pink} on:
 
 * Clean code
 * Reproducibile analysis
@@ -2022,7 +2031,7 @@ In addition, I have [additional materials]{.text-background-orange-web} on:
 Maybe next time?
 :::
 
-## {.bg-dartmouth-green}
+## {.bg-green}
 
 :::: {.columns}
 
@@ -2032,25 +2041,25 @@ Maybe next time?
 <br>
 <br>
 
-::: {.text-larger .text-color-orange-web .text-font-open-sans}
-Introduction to [GitHub]{.text-font-roboto .text-bold .text-color-dark_blue} and [Version Control]{.text-font-roboto .text-bold .text-color-dark_blue} 
+::: {.text-larger .text-color-pink .text-font-open-sans}
+Introduction to [GitHub]{.text-font-roboto .text-bold .text-color-green} and [Version Control]{.text-font-roboto .text-bold .text-color-green} 
 :::
 
 :::: {.r-hstack}
-::: {data-id="box1" style="background: `r colors['light_blue']`; width: 120px; height: 15px; margin: 0px;"}
+::: {data-id="box1" style="background: `r colors['azure']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 
-::: {data-id="box2" style="background: `r colors['dark_blue']`; width: 550px; height: 15px; margin: 0px;"}
+::: {data-id="box2" style="background: `r colors['green']`; width: 550px; height: 15px; margin: 0px;"}
 :::
 
-::: {data-id="box3" style="background: `r colors['primary_blue']`; width: 120px; height: 15px; margin: 0px;"}
+::: {data-id="box3" style="background: `r colors['purple']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 
 ::: {data-id="box3" style="background: `r colors['green']`; width: 120px; height: 15px; margin: 0px;"}
 :::
 ::::
 
-[28.11.2025]{.text-color-blue_dark}
+[28.11.2025]{.text-color-green}
 
 :::
 
